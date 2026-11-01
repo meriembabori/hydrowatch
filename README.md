@@ -1,4 +1,4 @@
-# MISE À JOUR : installation simplifiée SANS Docker (SQLite)
+# MISE À JOUR 
 
 La base de données est maintenant un simple fichier SQLite (créé
 automatiquement dans backend/hydrowatch.db). **Docker et PostgreSQL ne
