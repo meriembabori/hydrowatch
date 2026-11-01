@@ -1,0 +1,19 @@
+# Secrets et configuration locale
+.env
+
+# Environnements
+venv/
+.venv/
+node_modules/
+dist/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Base locale et données volumineuses (à ne pas pousser sur GitHub)
+*.db
+*.csv
+backend/data/raw/*.tif
+backend/data/processed/*.tif
+backend/data/processed/*.geojson
+backend/data/models/*.joblib

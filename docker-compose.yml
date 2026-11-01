@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    container_name: hydrowatch_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: hydrowatch
+      POSTGRES_PASSWORD: hydrowatch_dev_password
+      POSTGRES_DB: hydrowatch
+    ports:
+      - "5432:5432"
+    volumes:
+      - hydrowatch_pgdata:/var/lib/postgresql/data
+      - ./backend/scripts/init_db.sql:/docker-entrypoint-initdb.d/init_db.sql
+
+volumes:
+  hydrowatch_pgdata:
